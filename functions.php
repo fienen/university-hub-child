@@ -1,3 +1,4 @@
+<?php
 // Set our GTM container ID
 $gtm_id = 'GTM-T2FC5S4';
 // Output iframe noscript GTM include
