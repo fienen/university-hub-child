@@ -1,6 +1,6 @@
 <?php
 // Set our GTM container ID
-$gtm_id = 'GTM-T2FC5S4';
+global $gtm_id = 'GTM-T2FC5S4';
 // Output iframe noscript GTM include
 function wpc_include_gtm_body() {
   echo '<!-- Google Tag Manager (noscript) -->
@@ -19,4 +19,4 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->";
 }
 // Enqueue GTM header include
-add_action('wp_head', 'wpc_include_gtm');
+add_action('wp_head', 'wpc_include_gtm_head');
