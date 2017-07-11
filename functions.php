@@ -25,3 +25,13 @@ function wpc_include_gtm_head() {
 }
 // Enqueue GTM header include
 add_action('wp_head', 'wpc_include_gtm_head');
+
+// Test if a page is a child of another
+function is_child($pageID) { 
+	global $post; 
+	if( is_page() && ($post->post_parent==$pageID) ) {
+    return true;
+	} else { 
+    return false; 
+	}
+}
