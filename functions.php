@@ -1,8 +1,9 @@
 <?php
 // Set our GTM container ID
-global $gtm_id = 'GTM-T2FC5S4';
+$gtm_id = 'GTM-T2FC5S4';
 // Output iframe noscript GTM include
 function wpc_include_gtm_body() {
+  global $gtm_id;
   echo '<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=' . $gtm_id . '"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -10,6 +11,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }
 // Output script GTM include
 function wpc_include_gtm_head() {
+  global $gtm_id;
   echo "<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
