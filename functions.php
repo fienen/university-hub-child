@@ -1,6 +1,7 @@
 <?php
 // Set our GTM container ID
 $gtm_id = 'GTM-T2FC5S4';
+
 // Output iframe noscript GTM include
 function wpc_include_gtm_body() {
   global $gtm_id;
@@ -9,6 +10,7 @@ function wpc_include_gtm_body() {
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->';
 }
+
 // Output script GTM include
 function wpc_include_gtm_head() {
   global $gtm_id;
@@ -23,14 +25,6 @@ function wpc_include_gtm_head() {
 </script>
 <!-- End Google Tag Manager -->";
 }
+
 // Enqueue GTM header include
 add_action('wp_head', 'wpc_include_gtm_head');
-
-// Test if a page is a child of another
-function is_child($pageID) { 
-  global $post; 
-  if( is_page() && ($post->post_parent==$pageID) ) {
-    return true;
-  } else { 
-    return false; 
-}
