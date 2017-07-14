@@ -27,4 +27,4 @@ function wpc_include_gtm_head() {
 }
 
 // Enqueue GTM header include
-add_action('wp_head', 'wpc_include_gtm_head');
+add_action('wp_head', 'wpc_include_gtm_head', 0);
